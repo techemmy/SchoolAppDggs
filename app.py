@@ -17,7 +17,7 @@ app.config.update(
     MAIL_PORT = 465,
     MAIL_USE_SSL = True,
     MAIL_USERNAME = 'emmanueltopea@gmail.com',
-    MAIL_PASSWORD = ''
+    MAIL_PASSWORD = os.getenv('PASSWORD')
 )
 db.init_app(app)
 
