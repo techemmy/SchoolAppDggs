@@ -102,6 +102,9 @@ button:focus {
   width: 700px;
   margin:auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-text-container-content {
@@ -109,6 +112,42 @@ button:focus {
   bottom: 200px;
   color: #fff;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .img-text-container {
+    width: 200px;
+    margin:auto;
+    position: relative;
+  }
+
+  .img-text-container-content {
+    position: absolute;
+    bottom: 70px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .img-text-container-content p{
+    display: none;
+  }
+  a.main_btn {
+    width: 150px;
+    height: 35px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .img-text-container {
+    width: 100px;
+  }
+  .img-text-container-content {
+    bottom: 35px;
+  }
+  .img-text-container-content h3 {
+    font-size: 1rem;
+  }
 }
 
 .header_area {
