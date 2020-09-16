@@ -1,0 +1,5 @@
+env
+run.sh
+.vscode
+.vs
+__pycache__

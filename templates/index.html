@@ -1,0 +1,297 @@
+{% extends "layout.html" %}
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+{% block div %}
+	<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+		<ul class="nav navbar-nav menu_nav ml-auto">
+			<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="/courses/">Courses</a></li>
+			<li class="nav-item submenu dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">School Life</a>
+				<ul class="dropdown-menu">
+					<li class="nav-item"><a class="nav-link" href="/classes/">Classes</a>
+					<li class="nav-item"><a class="nav-link" href="/term-dates/">Term Dates</a></li>
+					<li class="nav-item"><a class="nav-link" href="/alumni/">Alumni</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="/gallery/">Gallery</a></li>
+			<li class="nav-item submenu dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Results</a>
+				<ul class="dropdown-menu">
+					<li class="nav-item"><a class="nav-link" href="/result/">WAEC Results</a></li>
+				</ul>
+			</li>
+			<li class="nav-item submenu dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admissions</a>
+				<ul class="dropdown-menu">
+					<li class="nav-item"><a class="nav-link" href="/apply-admis/">Apply for Admission</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+		</ul>
+	</div>
+{% endblock %}
+
+{% block body %}
+
+	<section class="home_banner_area">
+		<div>
+			<img src="{{ url_for('static', filename='img/banner/home-banner.jpg') }}" alt="" style="width: 100%;">
+			<div class="img-text-container">
+				<div class="img-text-container-content">
+					<h3>We Ensure better education <br />for a better world</h3>
+					<p>In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.</p>
+					<a class="main_btn" href="{{url_for('courses')}}">Get Started</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Finance Area =================-->
+	<section class="finance_area py-4">
+		<div class="container">
+			<div class="finance_inner row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="finance_item">
+						<div class="media">
+							<div class="d-flex py-3">
+								<i class="lnr lnr-rocket" style="color: dodgerblue;"></i>
+							</div>
+							<div class="media-body pl-4">
+								<h5>Science & <br />Laboratories</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="finance_item">
+						<div class="media">
+							<div class="d-flex py-3">
+								<i class="lnr lnr-earth" style="color: dodgerblue;"></i>
+							</div>
+							<div class="media-body pl-4">
+								<h5>History & <br />Library</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="finance_item">
+						<div class="media">
+							<div class="d-flex py-3">
+								<i class="lnr lnr-smile" style="color: dodgerblue;"></i>
+							</div>
+							<div class="media-body pl-4">
+								<h5>Nice<br />Classrooms</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="finance_item">
+						<div class="media">
+							<div class="d-flex py-3">
+								<i class="lnr lnr-tag" style="color: dodgerblue;"></i>
+							</div>
+							<div class="media-body pl-4">
+								<h5>Qualified & <br />Experienced Teachers</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Finance Area =================-->
+
+	<!--================Courses Area =================-->
+	<section class="courses_area p_120">
+		<div class="container">
+			<div class="main_title">
+				<h2>About Our School</h2>
+				<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+			</div>
+
+		</div>
+	</section>
+	<!--================End Courses Area =================-->
+
+	<!--================Team Area =================-->
+	<section class="team_area p_120">
+		<div class="container">
+			<div class="main_title">
+				<h2>Meet Our Admins</h2>
+				<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+			</div>
+			<div class="row team_inner">
+				<div class="col-lg-3 col-sm-6">
+					<div class="team_item">
+						<div class="team_img">
+							<img class="rounded-circle" src="{{ url_for('static', filename='img/team/team-1.jpg') }}" alt="">
+							<div class="hover">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team_name">
+							<h4>Mrs. James</h4>
+							<p>Proprietress</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="team_item">
+						<div class="team_img">
+							<img class="rounded-circle" src="{{ url_for('static', filename='img/team/team-2.jpg') }}" alt="">
+							<div class="hover">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team_name">
+							<h4>Mr. Opon</h4>
+							<p>Principal</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="team_item">
+						<div class="team_img">
+							<img class="rounded-circle" src="{{ url_for('static', filename='img/team/team-3.jpg') }}" alt="">
+							<div class="hover">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team_name">
+							<h4>Bra Segun</h4>
+							<p>Vice Principal - Admin</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="team_item">
+						<div class="team_img">
+							<img class="rounded-circle" src="{{ url_for('static', filename='img/team/team-4.jpg') }}" alt="">
+							<div class="hover">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team_name">
+							<h4>Bra Sagi</h4>
+							<p>Vice Principal - Education</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Team Area =================-->
+
+	<!--================Testimonials Area =================-->
+	<section class="testimonials_area p_120">
+		<div class="container">
+			<div class="testi_slider owl-carousel">
+				<div class="item">
+					<div class="testi_item">
+						<img src="{{ url_for('static', filename='img/testimonials/testi-1.png') }}" alt="">
+						<h4>Student 1</h4>
+						<ul class="list">
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+						</ul>
+						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="testi_item">
+						<img src="{{ url_for('static', filename='img/testimonials/testi-2.png') }}" alt="">
+						<h4>Student 2</h4>
+						<ul class="list">
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+						</ul>
+						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="testi_item">
+						<img src="{{ url_for('static', filename='img/testimonials/testi-1.png') }}" alt="">
+						<h4>Student 3</h4>
+						<ul class="list">
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+						</ul>
+						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!--================End Testimonials Area =================-->
+
+	<!--================Pagkages Area =================-->
+	<section class="packages_area p_120">
+		<div class="container">
+			<div class="row packages_inner">
+				<div class="col-lg-4">
+					<div class="packages_text">
+						<h3>Range of <br />Categories Offers</h3>
+						<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="packages_item">
+						<div class="pack_head">
+							<i class="lnr lnr-diamond"></i>
+							<h3>Primary School</h3>
+							<p>For Children</p>
+						</div>
+						<div class="pack_body">
+							<ul class="list">
+								<li><a href="#">Quality Education</a></li>
+								<li><a href="#">Nice Classrooms</a></li>
+								<li><a href="#">Low Cost</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="packages_item">
+						<div class="pack_head">
+							<i class="lnr lnr-graduation-hat"></i>
+							<h3>Secondary School</h3>
+							<p>For Teens and above</p>
+						</div>
+						<div class="pack_body">
+							<ul class="list">
+								<li><a href="#">Quality Education</a></li>
+								<li><a href="#">Live Practicals</a></li>
+								<li><a href="#">Conducive Environment</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Pagkages Area =================-->
+
+
+{% endblock %}

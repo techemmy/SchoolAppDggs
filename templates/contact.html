@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+{% block div %}
+	<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+		<ul class="nav navbar-nav menu_nav ml-auto">
+			<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="/courses/">Courses</a></li>
+			<li class="nav-item submenu dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">School Life</a>
+				<ul class="dropdown-menu">
+					<li class="nav-item"><a class="nav-link" href="/classes/">Classes</a>
+					<li class="nav-item"><a class="nav-link" href="/term-dates/">Term Dates</a></li>
+<li class="nav-item"><a class="nav-link" href="/alumni/">Alumni</a></li>
+				</ul>
+			</li>
+<li class="nav-item"><a class="nav-link" href="/gallery/">Gallery</a></li>
+			<li class="nav-item submenu dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Results</a>
+				<ul class="dropdown-menu">
+					<li class="nav-item"><a class="nav-link" href="/result/">WAEC Results</a></li>
+				</ul>
+			</li>
+			<li class="nav-item submenu dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admissions</a>
+				<ul class="dropdown-menu">
+					<li class="nav-item"><a class="nav-link" href="/apply-admis/">Apply for Admission</a></li>
+				</ul>
+			</li>
+			<li class="nav-item active"><a class="nav-link" href="/contact/">Contact</a></li>
+		</ul>
+	</div>
+{% endblock %}
+{% block body %}
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h2>Contact Us</h2>
+                    <div class="page_link">
+                        <a href="/">Home</a>
+                        <a href="/contact/">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Start Contact Area =================-->
+    <section class="contact_area p_120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="contact_info">
+                        <div class="info_item">
+                            <i class="lnr lnr-home"></i>
+                            <h6>Ogun State, Nigeria</h6>
+                            <p>Loburo Obafemi-Owode L.G.A</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-phone-handset"></i>
+                            <h6><a href="#">00 (440) 9865 562</a></h6>
+                            <p>Mon to Fri 9am to 3pm</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-envelope"></i>
+                            <p>Send us your query anytime!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <form class="row contact_form" action="{{ url_for('contact') }}" method="POST" id="contactForm">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" aria-required="true" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" aria-required="true" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message" aria-required="true" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+                        </div>
+                        <style>
+								.submit_btn {
+									padding: 10px ;
+									border-radius: 5px;
+									border: 1px solid dodgerblue;
+									display: inline-block;
+									background: dodgerblue;
+									color: white;
+									margin-left: 10px;
+								}
+								.submit_btn:hover{
+									background: transparent;
+									border: 1px solid dodgerblue;
+									color: dodgerblue;
+								}
+								label {
+									padding: 10px;
+								}
+						</style>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+        </div>
+    </div>
+    <!--================End Contact Area =================-->
+{% endblock %}

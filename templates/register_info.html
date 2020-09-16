@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block div %}
+	<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+		<ul class="nav navbar-nav menu_nav ml-auto">
+			<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="/courses/">Courses</a></li>
+			<li class="nav-item submenu dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">School Life</a>
+				<ul class="dropdown-menu">
+					<li class="nav-item"><a class="nav-link" href="/classes/">Classes</a>
+					<li class="nav-item"><a class="nav-link" href="/term-dates/">Term Dates</a></li>
+<li class="nav-item"><a class="nav-link" href="/alumni/">Alumni</a></li>
+				</ul>
+			</li>
+<li class="nav-item"><a class="nav-link" href="/gallery/">Gallery</a></li>
+			<li class="nav-item submenu dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Results</a>
+				<ul class="dropdown-menu">
+					<li class="nav-item"><a class="nav-link" href="/result/">WAEC Results</a></li>
+				</ul>
+			</li>
+			<li class="nav-item submenu dropdown active">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admissions</a>
+				<ul class="dropdown-menu">
+					<li class="nav-item"><a class="nav-link" href="/apply-admis/">Apply for Admission</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+		</ul>
+	</div>
+{% endblock %}
+{% block body %}
+<div style="padding: 150px;">
+	<h1 style="color: black;text-align:center;">Check your mail to complete the registeration process.</h1>
+	<div style="text-align: center;columns: 2 100px;">
+		<h3>{{ firstname }}</h3>
+		<h3>{{ lastname }}</h3>
+		<h3>{{ email }}</h3>
+		<h3>{{ dob }}</h3>
+		<h3>{{ dclass }}</h3>
+		<h3>{{ country_code }}</h3>
+		<h3>{{ language }}</h3>
+		<h3>{{ address }}</h3>
+		<h3>{{ phone_number }}</h3>
+		<h3>{{ gender }}</h3>
+	</div>
+</div>
+	<hr>
+{% endblock %}
