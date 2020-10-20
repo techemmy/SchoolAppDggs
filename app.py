@@ -114,11 +114,11 @@ def register_page():
 
 @app.errorhandler(404)
 def page(message):
-    return render_template("404.html",)
+    return render_template("404.html",), 404
 
 @app.errorhandler(405)
 def page(message):
-    return render_template('405.html',)
+    return render_template('405.html',), 405
 
 def add_alumni():
     for info in CONT["Alumni"]:
