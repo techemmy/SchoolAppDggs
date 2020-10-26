@@ -21,14 +21,5 @@ def Content():
                     ['Carol Party', 'Friday 2nd Week in December'],
                     ['1st Term Vacation', 'Friday 2nd Week in September'],
                     ],
-            "Alumni": [['Leander danuel', '2019/2020'],
-                       ['Stony danuel', '2019/2020'],
-                       ['Duels Linky', '2019/2020'],
-                       ['Olageshin Jesujinde', '2019/2020'],
-                       ['Emmanuel Leander', '2019/2020'],
-                       ['Joshua Linda', '2019/2020'],
-                       ['Adebayo David', '2019,2020'],
-                       ['Adebayo Emmanuel', '2019/2020'],
-                      ]
             }
     return CONT
