@@ -1,8 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
-from flask import Flask
-import os
 
 db = SQLAlchemy()
+
 
 class Student(db.Model):
     __tablename__ = "students"
@@ -15,21 +14,30 @@ class Student(db.Model):
     dclass = db.Column(db.String, nullable=False) 
     language = db.Column(db.String, nullable=False)
     address = db.Column(db.String, nullable=False)
-    country_code = db.Column(db.String, nullable=False)
+    number = db.Column(db.Integer, nullable=False)
 
-    def add_student(firstname, lastname, email, dob, gender, dclass, language, address, country_code):
-        info = Student(firstname=firstname, lastname=lastname, email=email, dob=dob, gender=gender, dclass=dclass, language=language, address=address, country_code=country_code)
+    @staticmethod
+    def add_student(firstname, lastname, email, dob,
+                    gender, dclass, language, address, number):
+        info = Student(firstname=firstname, lastname=lastname,
+                       email=email, dob=dob, gender=gender,
+                       dclass=dclass, language=language,
+                       address=address, number=number)
         db.session.add(info)
         db.session.commit()
+
 
 class Alumni(db.Model):
     __tablename__ = "alumni"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     year = db.Column(db.String, nullable=False)
+    is_confirmed = db.Column(db.Boolean, nullable=False, default=False)
 
-    def add_alumni(name, year):
+    @staticmethod
+    def add_alumni(name, year, confirm=False):
         alumni = Alumni(name=name, year=year)
+        alumni.is_confirmed = confirm
         db.session.add(alumni)
         db.session.commit()
         
@@ -49,3 +57,28 @@ class Alumni(db.Model):
             all_list.append([obj.name, obj.year])
         return all_list
 
+
+class Admin(db.Model):
+    __tablename__ = "admin"
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), unique=True)
+    pwd_hash = db.Column(db.Text)
+
+    @staticmethod
+    def add_admin(username, pwd_hash):
+        admin = Admin(username=username, pwd_hash=pwd_hash)
+        db.session.add(admin)
+        db.session.commit()
+
+
+class Calendar(db.Model):
+    __tablename__ = "calendar"
+    id = db.Column(db.Integer, primary_key=True)
+    event = db.Column(db.String(50), unique=True)
+    date = db.Column(db.DateTime)
+
+    @staticmethod
+    def add_event(event, date):
+        data = Calendar(event=event, date=date)
+        db.session.add(data)
+        db.session.commit()
