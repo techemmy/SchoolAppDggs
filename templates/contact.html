@@ -1,36 +1,5 @@
 {% extends "layout.html" %}
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-{% block div %}
-	<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-		<ul class="nav navbar-nav menu_nav ml-auto">
-			<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="/courses/">Courses</a></li>
-			<li class="nav-item submenu dropdown">
-				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">School Life</a>
-				<ul class="dropdown-menu">
-					<li class="nav-item"><a class="nav-link" href="/classes/">Classes</a>
-					<li class="nav-item"><a class="nav-link" href="/term-dates/">Term Dates</a></li>
-<li class="nav-item"><a class="nav-link" href="/alumni/">Alumni</a></li>
-				</ul>
-			</li>
-<li class="nav-item"><a class="nav-link" href="/gallery/">Gallery</a></li>
-			<li class="nav-item submenu dropdown">
-				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Results</a>
-				<ul class="dropdown-menu">
-					<li class="nav-item"><a class="nav-link" href="/result/">WAEC Results</a></li>
-				</ul>
-			</li>
-			<li class="nav-item submenu dropdown">
-				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admissions</a>
-				<ul class="dropdown-menu">
-					<li class="nav-item"><a class="nav-link" href="/apply-admis/">Apply for Admission</a></li>
-				</ul>
-			</li>
-			<li class="nav-item active"><a class="nav-link" href="/contact/">Contact</a></li>
-		</ul>
-	</div>
-{% endblock %}
 {% block body %}
     <section class="banner_area">
         <div class="banner_inner d-flex align-items-center">
@@ -47,7 +16,7 @@
         </div>
     </section>
     <!--================End Home Banner Area =================-->
-
+    {% include "includes/messages.html" %}
     <!--================Start Contact Area =================-->
     <section class="contact_area p_120">
         <div class="container">
@@ -89,27 +58,8 @@
                             </div>
                         </div>
                         <div class="col-md-12 text-right">
-                            <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+                            <button type="submit" value="submit" class="btn contact_submit_btn">Send Message</button>
                         </div>
-                        <style>
-								.submit_btn {
-									padding: 10px ;
-									border-radius: 5px;
-									border: 1px solid dodgerblue;
-									display: inline-block;
-									background: dodgerblue;
-									color: white;
-									margin-left: 10px;
-								}
-								.submit_btn:hover{
-									background: transparent;
-									border: 1px solid dodgerblue;
-									color: dodgerblue;
-								}
-								label {
-									padding: 10px;
-								}
-						</style>
                     </form>
                 </div>
             </div>
