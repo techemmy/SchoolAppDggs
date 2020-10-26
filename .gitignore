@@ -3,3 +3,5 @@ run.sh
 .vscode
 .vs
 __pycache__
+.idea/
+migrations/s
