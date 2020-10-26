@@ -1,0 +1,19 @@
+<section class="feature">
+    <div class="admin-form alumni-form">
+        <h3 class="feature-header">Add New Admin</h3>
+        <form action="{{ url_for('add_new_admin') }}" method="post">
+            <div class="sub-form username">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="Enter Admin's Name"
+                       aria-placeholder="Enter Admin's Name" required>
+            </div>
+            <div class="sub-form password">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password"
+                       placeholder="Enter password"
+                       aria-placeholder="Enter password" required>
+            </div>
+            <button type="submit">Add Admin</button>
+        </form>
+    </div>
+</section>
