@@ -32,12 +32,12 @@ class Alumni(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     year = db.Column(db.String, nullable=False)
-    is_confirmed = db.Column(db.Boolean, nullable=False, default=False)
+    # is_confirmed = db.Column(db.Boolean, nullable=False, default=False)
 
     @staticmethod
     def add_alumni(name, year, confirm=False):
         alumni = Alumni(name=name, year=year)
-        alumni.is_confirmed = confirm
+        # alumni.is_confirmed = confirm
         db.session.add(alumni)
         db.session.commit()
         
