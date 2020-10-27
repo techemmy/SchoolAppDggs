@@ -5,6 +5,7 @@ from models import db, Student, Alumni, Admin, Calendar
 import os
 from cm import Content
 from flask_mail import Mail, Message
+from flask_migrate import Migrate
 from functools import wraps
 from passlib.hash import sha256_crypt
 from collections import defaultdict
@@ -23,6 +24,8 @@ app.config.update(
     MAIL_PASSWORD=os.getenv('PASSWORD')
 )
 db.init_app(app)
+migrate = Migrate(app, db)
+
 mail = Mail(app)
 
 CONT = Content()
