@@ -54,12 +54,13 @@ def sieve_new_and_existing_alumni():
     return alumni_to_add
 
 
-def send_mail(title, body, email):
+def send_mail(title: str, body: str, email: str):
     msg = Message(title,
                   sender=app.config['MAIL_USERNAME'],
                   recipients=[email])
     msg.body = body
     return mail.send(msg)
+
 
 # ------------------- ROUTES ----------------- #
 @app.route('/')
@@ -82,7 +83,9 @@ def classes():
 @app.route('/calendar/')
 def calendar():
     events = [[event.event,
-               f"{event.date.day}-{event.date.month}-{event.date.year}"]
+               "{0}-{1}-{2}".format(
+                   event.date.day, event.date.month, event.date.year
+               )]
               for event in Calendar.query.all()]
     return render_template("calendar.html", events=events)
 
@@ -216,7 +219,7 @@ def alumni_request():
 
         flash("Your request was sent successfully.")
         return redirect(url_for('alumni_request'))
-    return render_template("/request-alumni.html")
+    return render_template("request-alumni.html")
 
 
 @app.route('/login/', methods=['POST', 'GET'])
@@ -239,7 +242,7 @@ def admin_login():
         else:
             flash("Invalid Credentials.")
             return redirect(url_for('admin_login'))
-    return render_template("/admin/admin-login.html")
+    return render_template("admin/admin-login.html")
 
 
 @app.route('/admin/', methods=['GET', 'POST'])
@@ -293,7 +296,7 @@ def accept_alumni_requests():
 
 @app.route('/update-alumni/<int:value>/<int:pos>/')
 @login_required
-def update_alumni(value, pos):
+def update_alumni(value: int, pos: int) -> None:
     alumni_act = Alumni.query.get(pos)
     if alumni_act:
         if value:
@@ -334,7 +337,9 @@ def add_new_admin():
 @app.route('/admin/manage-calendar', methods=['GET', 'POST'])
 def modify_calendar():
     events = [[event.event,
-               f"{event.date.day}-{event.date.month}-{event.date.year}"]
+               "{0}-{1}-{2}".format(
+                   event.date.day, event.date.month, event.date.year
+               )]
               for event in Calendar.query.all()]
     if request.method == 'POST':
         event = request.form['event']
@@ -350,7 +355,7 @@ def modify_calendar():
 
 @app.route('/del-date/<pos>/')
 @login_required
-def delete_event(pos):
+def delete_event(pos: int):
     event = Calendar.query.get(pos)
     if event:
         db.session.delete(event)
