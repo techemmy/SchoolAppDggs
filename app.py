@@ -378,11 +378,6 @@ def page_not_found(message):
 def invalid_request(message):
     return render_template('error.html', message=message), 405
 
-
-def main():
-    db.create_all()
-
     
 if __name__ == "__main__":
-    with app.app_context():
-        main()
+    app.run()
