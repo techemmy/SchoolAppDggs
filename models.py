@@ -14,7 +14,7 @@ class Student(db.Model):
     dclass = db.Column(db.String, nullable=False) 
     language = db.Column(db.String, nullable=False)
     address = db.Column(db.String, nullable=False)
-    number = db.Column(db.Integer, nullable=False)
+    # number = db.Column(db.Integer, nullable=False)
 
     @staticmethod
     def add_student(firstname, lastname, email, dob,
