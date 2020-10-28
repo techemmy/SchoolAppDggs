@@ -218,7 +218,7 @@ div.mg {
   .container-mg .box {
     grid-area: box;
     overflow: auto;
-    padding: 15px;
+    padding: 10px;
   }
   .container-mg .logout-btn {
     background: white;
