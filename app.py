@@ -5,15 +5,17 @@ from models import db, Student, Alumni, Admin, Calendar
 import os
 from cm import Content
 from flask_mail import Mail, Message
+from flask_migrate import Migrate
 from functools import wraps
 from passlib.hash import sha256_crypt
 from collections import defaultdict
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
-app.config["SECRET_KEY"] = os.urandom(25)
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config.update(
+
+app.config.from_mapping(
+    SQLALCHEMY_DATABASE_URI=os.getenv('DATABASE_URL'),
+    SECRET_KEY=os.getenv('SECRET_KEY'),
+    SQLALCHEMY_TRACK_MODIFICATIONS=False,
     DEBUG=True,
     #  EMAIL SETTINGS
     MAIL_SERVER='smtp.gmail.com',
@@ -24,6 +26,7 @@ app.config.update(
 )
 db.init_app(app)
 mail = Mail(app)
+migrate = Migrate(app, db)
 
 CONT = Content()
 
