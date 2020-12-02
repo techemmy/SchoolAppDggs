@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="admin-form">
+    {% include "includes/messages.html" %}
+    <h2>Send Request</h2>
+    <form action="{{ url_for('main.alumni_request') }}" method="post">
+        <small>Note: Your info will be sent to the school for confirmation
+             before your name will appear on the list.</small>
+        <div class="sub-form name">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name"
+                   aria-placeholder="Enter your name" required>
+        </div>
+        <div class="sub-form sub-year">
+            <label for="year">Year:</label>
+            <input type="number" name="year" id="year"
+                   placeholder="Enter your graduation year"
+                   aria-placeholder="Enter your graduation year" required>
+        </div>
+        <button type="submit">Send request</button>
+    </form>
+</div>
+{% endblock %}

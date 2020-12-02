@@ -1,0 +1,16 @@
+<section class="feature">
+    <div class="admin-form alumni-form">
+        <h3 class="feature-header">Add New Alumni</h3>
+        <form action="{{ url_for('admin.add_new_alumni') }}" method="post">
+            <div class="sub-form name">
+                <label for="name">Name:</label>
+                <input  type="text" name="name" id="name" placeholder="Enter Alumni's Name" aria-placeholder="Enter Alumni's Name" required>
+            </div>
+            <div class="sub-form year">
+                <label for="year">Year:</label>
+                <input type="number" name="year" id="year" placeholder="Enter graduation year" aria-placeholder="Enter graduation year" required>
+            </div>
+            <button type="submit">Add Alumni</button>
+        </form>
+    </div>
+</section>

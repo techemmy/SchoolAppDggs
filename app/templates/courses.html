@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>Courses</h2>
+					<div class="page_link">
+						<a href="/">Home</a>
+						<a href="{{ url_for('main.courses') }}">Courses</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================About Area =================-->
+	<section class="about_area p_120">
+		<div class="container">
+			<div class="main_title">
+				<h2>Courses we Offer</h2>
+				<p>This are the lists of courses/subjects offered by the school. For more information on the courses/subjects contact the school via the contact page.</p>
+			</div>
+			<div class="row about_inner">
+				<div class="col-lg-6">
+					<div class="accordion" id="accordionExample">
+						<div class="card">
+							<div class="card-header" id="headingOne">
+								<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								Science Courses
+								<i class="lnr lnr-chevron-down"></i>
+								<i class="lnr lnr-chevron-up"></i>
+								</button>
+							</div>
+
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+								<div class="card-body">
+								The science courses includes Chemistry, Biology, Physics, Geography, Agricultural Science, Further Mathematics, Technical Drawing, 
+								English Language, Mathematics, Economic (Optional for science students), Civic Education, Catering Craft, Yoruba/Ibo Languaage, Computer Studies.
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingTwo">
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Art Courses
+								<i class="lnr lnr-chevron-down"></i>
+								<i class="lnr lnr-chevron-up"></i>
+								</button>
+							</div>
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+								<div class="card-body">
+								The art courses includes Lit-In-English, C.R.S/I.R.S, Mathematics, English Language, Biology, Government, Food and Nutrition, 
+								Civic Education, Yoruba/Igbo Language, Computer Studies.
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingThree">
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								Commercial Courses
+								<i class="lnr lnr-chevron-down"></i>
+								<i class="lnr lnr-chevron-up"></i>
+								</button>
+							</div>
+							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+								<div class="card-body">
+								Mathematics, English Language, Commerce, Accounting, Economics, Biology, Geography, Government, Yoruba/Ibo Language, Food and Nutrition,
+								C.R.S, Civic Education, Computer Studies.
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingfour">
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+								Basic Subjects
+								<i class="lnr lnr-chevron-down"></i>
+								<i class="lnr lnr-chevron-up"></i>
+								</button>
+							</div>
+							<div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+								<div class="card-body">
+								<h4>For Junior Secondary School</h4>
+								Mathematics, English Language, A Nigerian Language (Yoruba), Basic Science, Social Studies, Fine Arts/Creative Art, Agricultural Science, 
+								Civic Education, Christian Religion Studies, Physical and Health Education, Business Studies, French, Computer Studies, Home Economics, 
+								Music, Basic Technology
+								<h4>For Primary School</h4>
+								The subjects approved by the Ministry of Education and taught at primary school level include the following: English
+								Language, Mathematics, Nigerian Languages, Basic Science and Technology (BST), Religion and National Values (RNV),
+								Cultural &amp; Creative Arts (CCA), Arabic Language, Pre-Vocational Studies.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="video_area" id="video">
+						<img class="img-fluid" src="{{url_for('static', filename='img/video-1.jpg') }}" alt="">
+						<a class="popup-youtube" href="{{ url_for('static', filename='https://www.youtube.com/watch?v=VufDd-QL1c0') }}">
+							<img src="{{ url_for('static', filename='img/icon/video-icon-1.png') }}" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="about_details container">
+				<p>Note that some subjects are compulsory subjects for the science, art and commercial courses. These subjects includes English Language, Mathematics, Civic Education and more.
+				   Some are also general optional subjects like Economics, Computer Studies, and more.
+				   For more information on the subjects, please contact the school.
+				</p>
+			</div>
+		</div>
+	</section>
+	<!--================End About Area =================-->
+
+
+{% endblock %}

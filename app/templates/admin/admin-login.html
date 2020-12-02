@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% include "includes/messages.html" %}
+
+<div class="admin-form">
+    <h2>LOG IN AS ADMIN</h2>
+    <form action="{{ url_for('auth.admin_login') }}" method="post">
+        <small>Note: This page is for admins only.</small>
+        <div class="sub-form sub-username">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" placeholder="Enter your username" aria-placeholder="Enter your username" required>
+        </div>
+        <div class="sub-form sub-pwd">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" aria-placeholder="Enter your username" required>
+        </div>
+        <button type="submit">Log In</button>
+    </form>
+</div>
+{% endblock %}

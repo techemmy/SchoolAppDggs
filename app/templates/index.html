@@ -1,0 +1,279 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	{% include "includes/messages.html" %}
+	<section class="home_banner_area">
+		<div>
+			<img src="{{ url_for('static', filename='img/banner/home-banner.jpg') }}" alt="" style="width: 100%;">
+			<div class="img-text-container">
+				<div class="img-text-container-content">
+					<h3>We Ensure better education <br />for a better world</h3>
+					<p>Our mission at Divine Glory Group of Schools is to provide a safe,
+					supportive, and challenging environment in
+					which students will become active,
+					reflective, and creative learners who accept
+					responsibility for learning, have pride in
+					their community and are prepared to
+					contribute in a culturally diverse world.</p>
+					<a class="main_btn" href="{{url_for('main.courses')}}">Get Started</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Finance Area =================-->
+	<section class="finance_area py-4">
+		<div class="container">
+			<div class="finance_inner row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="finance_item">
+						<div class="media">
+							<div class="d-flex py-3">
+								<i class="lnr lnr-rocket" style="color: dodgerblue;"></i>
+							</div>
+							<div class="media-body pl-4">
+								<h5>Science & <br />Laboratories</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="finance_item">
+						<div class="media">
+							<div class="d-flex py-3">
+								<i class="lnr lnr-earth" style="color: dodgerblue;"></i>
+							</div>
+							<div class="media-body pl-4">
+								<h5>History & <br />Library</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="finance_item">
+						<div class="media">
+							<div class="d-flex py-3">
+								<i class="lnr lnr-smile" style="color: dodgerblue;"></i>
+							</div>
+							<div class="media-body pl-4">
+								<h5>Nice<br />Classrooms</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="finance_item">
+						<div class="media">
+							<div class="d-flex py-3">
+								<i class="lnr lnr-tag" style="color: dodgerblue;"></i>
+							</div>
+							<div class="media-body pl-4">
+								<h5>Qualified & <br />Experienced Teachers</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Finance Area =================-->
+
+	<!--================Courses Area =================-->
+	<section class="courses_area" style="padding: 100px 50px 0 50px">
+		<div class="container">
+			<div class="main_title">
+				<h2>Mission and Vision</h2>
+	
+				<div><b>It is Our Mission to Develop our Students' Potentials and Produce Lifelong Learners</b></div>
+				<div><b><br></b></div>
+				<div>Divine Glory Group Of Schools is a community of learners contributing to the world through the power of
+					education.</div>
+				<div><br></div>
+				<div>We have a dual mission: to provide a supportive college preparatory environment for students and a
+					collaborative mentoring experience for aspiring teachers.</div>
+				<div><br></div>
+				<div>We share the core values of compassion, commitment, integrity, and reflection, which we call the Learner’s
+					Life. By infusing our school culture with these qualities, we seek to inspire excellence in ourselves and
+					our community.</div><br><br>			
+		
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!--================End Courses Area =================-->
+
+	<!--================Team Area =================-->
+	<section class="team_area" style="padding: 0 50px 100px 50px;">
+		<div class="container">
+			<div class="main_title">
+				<h2>Meet Our Admins</h2>
+				<p>These are the administration personnels of the 
+					Divine Glory Comprehensive High School.</p>
+			</div>
+			<div class="row team_inner">
+				<div class="col-lg-3 col-sm-6">
+					<div class="team_item">
+						<div class="team_img">
+							<img class="rounded-circle" src="{{ url_for('static', filename='img/team/team-1.jpg') }}" alt="">
+							<div class="hover">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+							</div>
+						</div>
+						<div class="team_name">
+							<h4>Mrs. James</h4>
+							<p>Proprietress</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="team_item">
+						<div class="team_img">
+							<img class="rounded-circle" src="{{ url_for('static', filename='img/team/team-2.jpg') }}" alt="">
+							<div class="hover">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+							</div>
+						</div>
+						<div class="team_name">
+							<h4>Mr. Opon</h4>
+							<p>Principal</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="team_item">
+						<div class="team_img">
+							<img class="rounded-circle" src="{{ url_for('static', filename='img/team/team-3.jpg') }}" alt="">
+							<div class="hover">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+							</div>
+						</div>
+						<div class="team_name">
+							<h4>Mrs. Olatujoye</h4>
+							<p>Vice Principal - Admin</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="team_item">
+						<div class="team_img">
+							<img class="rounded-circle" src="{{ url_for('static', filename='img/team/team-4.jpg') }}" alt="">
+							<div class="hover">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+							</div>
+						</div>
+						<div class="team_name">
+							<h4>Mr. Mike</h4>
+							<p>Vice Principal - Education</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Team Area =================-->
+
+	<!--================Testimonials Area =================-->
+	<section class="testimonials_area p_120">
+		<div class="container">
+			<div class="testi_slider owl-carousel">
+				<div class="item">
+					<div class="testi_item">
+						<img src="{{ url_for('static', filename='img/testimonials/testi-1.png') }}" alt="">
+						<h4>Student 1</h4>
+						<ul class="list">
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+						</ul>
+						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="testi_item">
+						<img src="{{ url_for('static', filename='img/testimonials/testi-2.png') }}" alt="">
+						<h4>Student 2</h4>
+						<ul class="list">
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+						</ul>
+						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="testi_item">
+						<img src="{{ url_for('static', filename='img/testimonials/testi-1.png') }}" alt="">
+						<h4>Student 3</h4>
+						<ul class="list">
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+						</ul>
+						<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!--================End Testimonials Area =================-->
+
+	<!--================Pagkages Area =================-->
+	<section class="packages_area p_120">
+		<div class="container">
+			<div class="row packages_inner">
+				<div class="col-lg-4">
+					<div class="packages_text">
+						<h3>Range of <br />Categories Offers</h3>
+						<p>Our academic institution offers a wide range of academic
+							levels ranging from the Kindergarten, Nursery School,
+							Primary School and Secondary School.</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="packages_item">
+						<div class="pack_head">
+							<i class="lnr lnr-diamond"></i>
+							<h3>Primary School</h3>
+							<p>For Children</p>
+						</div>
+						<div class="pack_body">
+							<ul class="list">
+								<li><a>Quality Education</a></li>
+								<li><a>Nice Classrooms</a></li>
+								<li><a>Low Cost</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="packages_item">
+						<div class="pack_head">
+							<i class="lnr lnr-graduation-hat"></i>
+							<h3>Secondary School</h3>
+							<p>For Teens and above</p>
+						</div>
+						<div class="pack_body">
+							<ul class="list">
+								<li><a>Quality Education</a></li>
+								<li><a>Live Practicals</a></li>
+								<li><a>Conducive Environment</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Pagkages Area =================-->
+
+
+{% endblock %}

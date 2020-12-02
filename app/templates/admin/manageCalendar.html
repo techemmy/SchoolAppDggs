@@ -1,0 +1,51 @@
+<section class="feature">
+    <div class="admin-form alumni-form">
+        <h3 class="feature-header">Manage Calendar</h3>
+        <h5>Add New Event</h5>
+            <form action="{{ url_for('admin.modify_calendar') }}" method="post">
+                <div class="sub-form event">
+                    <label for="event">Event:</label>
+                    <input type="text" name="event" id="event" placeholder="Enter Event's Name"
+                           aria-placeholder="Enter Event's Name" required>
+                </div>
+                <div class="sub-form date">
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" id="date"
+                           placeholder="Enter date"
+                           aria-placeholder="Enter date" required>
+                </div>
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+       <h5>View/Delete Events</h5>
+       <table class="table table-bordered">
+            <thead style="text-align: center;">
+                <tr style="background: dodgerblue; color: #fff;">
+                    <th scope="col" class="px-1">#</th>
+                    <th scope="col">Event</th>
+                    <th scope="col">Date
+                    <br> (Day/Month/Year)</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;">
+            {% if dates %}
+                {% for date in dates %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ date[0] }}</td>
+                    <td>{{ date[1] }}</td>
+                    <td>
+                        <a href="{{ url_for('admin.delete_event', pos=date.id) }}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td colspan="4">No Events</td>
+                </tr>
+            {% endif %}
+            </tbody>
+        </table>
+
+</section>

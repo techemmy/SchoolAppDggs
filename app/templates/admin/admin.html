@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% include "includes/messages.html" %}
+<div class="mg">
+    <main class="container-mg">
+        <h2 class="admin-page">ADMIN CONTROL</h2>
+        <aside class="features">
+            <ol>
+                {% for data_type, text in features.items() %}
+                <li class="admin-feature" data-page="{{ data_type }}">{{ text }}</li>
+                {% endfor %}
+                <a class="logout-btn" href="{{ url_for('auth.logout') }}">
+                        <button>Logout</button>
+                </a>
+            </ol>
+        </aside>
+        <div class="box">
+        </div>
+    </main>
+</div>
+{% endblock %}
+
+{% block extra_script %}
+    <script src="{{ url_for('static', filename='js/features.js') }}"></script>
+{% endblock %}
