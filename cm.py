@@ -15,11 +15,5 @@ def Content():
                     ['Animal Husbandry', 91], ['Further Mathematics', 79],
                     ['Data Processing', 96],
                     ],
-            "Term-Dates": [
-                    ['mid-term-break', '7th Week of the term'],
-                    ['Valendictory Service', '1st Saturday in August'],
-                    ['Carol Party', 'Friday 2nd Week in December'],
-                    ['1st Term Vacation', 'Friday 2nd Week in September'],
-                    ],
             }
     return CONT
