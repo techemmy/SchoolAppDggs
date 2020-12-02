@@ -4,3 +4,6 @@ run.sh
 .vs
 __pycache__
 .idea/
+.env
+data-dev.sqlite
+data.sqlite
