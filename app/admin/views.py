@@ -23,7 +23,7 @@ def index():
 
 
 # =======================================================
-# = URLS THAT USES THE FEATURES DICTIONARY KEY AS URL =#
+# = URLS THAT USES THE FEATURES DICTIONARY KEYS AS ENDPOINTS =#
 # =======================================================
 
 # the url is from the features dict
